@@ -83,14 +83,12 @@
 		308645AB1B127018009BDCC1 /* Breakout */ = {
 			isa = PBXGroup;
 			children = (
+				308645B21B127018009BDCC1 /* Main.storyboard */,
 				308645CE1B12705B009BDCC1 /* Ball.swift */,
 				308645CF1B12705B009BDCC1 /* BreakoutViewController.swift */,
 				308645D01B12705B009BDCC1 /* Brick.swift */,
 				308645D11B12705B009BDCC1 /* Stopper.swift */,
 				308645AE1B127018009BDCC1 /* AppDelegate.swift */,
-				308645B21B127018009BDCC1 /* Main.storyboard */,
-				308645B51B127018009BDCC1 /* Images.xcassets */,
-				308645B71B127018009BDCC1 /* LaunchScreen.xib */,
 				308645AC1B127018009BDCC1 /* Supporting Files */,
 			);
 			path = Breakout;
@@ -99,6 +97,8 @@
 		308645AC1B127018009BDCC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				308645B51B127018009BDCC1 /* Images.xcassets */,
+				308645B71B127018009BDCC1 /* LaunchScreen.xib */,
 				308645AD1B127018009BDCC1 /* Info.plist */,
 			);
 			name = "Supporting Files";

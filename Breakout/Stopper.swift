@@ -8,6 +8,7 @@
 
 import UIKit
 
-class Stopper: NSObject {
-   
+class Stopper: UIView {
+    
+       
 }
