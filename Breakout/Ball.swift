@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Ball: NSObject {
+class Ball: UIView {
    
 }

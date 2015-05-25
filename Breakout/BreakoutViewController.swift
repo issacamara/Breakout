@@ -8,10 +8,17 @@
 
 import UIKit
 
-class BreakoutViewController: UIViewController {
+class BreakoutViewController: UIViewController, UIDynamicAnimatorDelegate {
     
     @IBOutlet weak var gameView: UIView!
+    @IBOutlet weak var ball: Ball!
+    var ballBehavior = BallDynamicBehavior()
     
+    lazy var animator: UIDynamicAnimator = {
+        let lazilyCreatedDynanamicAnimator = UIDynamicAnimator(referenceView: self.gameView)
+        lazilyCreatedDynanamicAnimator.delegate = self
+        return lazilyCreatedDynanamicAnimator
+    }()
     
     let bricksPerRow = 25
     let rowsPerGame = 5
@@ -43,27 +50,34 @@ class BreakoutViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var stopper: Stopper!
+    @IBOutlet weak var paddle: Paddle!
     
-    @IBAction func moveStopper(sender: UIPanGestureRecognizer) {
+    @IBAction func movePaddle(sender: UIPanGestureRecognizer) {
         let location = sender.locationInView(gameView)
-        if location.x >= CGFloat(widthOffset) && location.x <= (gameView.bounds.size.width - CGFloat(widthOffset) - stopper.frame.width) {
-            let newPosition = CGPoint(x: location.x, y: stopper.frame.origin.y)
-            stopper.frame = CGRect(origin: newPosition, size: stopper.frame.size)
+        if location.x >= CGFloat(widthOffset) && location.x <= (gameView.bounds.size.width - CGFloat(widthOffset) - paddle.frame.width) {
+            let newPosition = CGPoint(x: location.x, y: paddle.frame.origin.y)
+            paddle.frame = CGRect(origin: newPosition, size: paddle.frame.size)
         }
     }
-    
-    
-    
+
+    @IBAction func launchBall(sender: UITapGestureRecognizer) {
+        ballBehavior.add(ball)
+    }
+
+
+    func positionComponents() {
+        paddle.frame = CGRect(x: 275, y: 475, width: 50, height: 25)
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        animator.addBehavior(ballBehavior)
     }
     
     override func viewWillLayoutSubviews() {
         drawBricks()
+        
     }
 
 }
@@ -71,14 +85,6 @@ class BreakoutViewController: UIViewController {
 
 private extension UIColor {
     class var random: UIColor {
-//        switch arc4random() % 5{
-//        case 0: return UIColor.greenColor()
-//        case 1: return UIColor.blueColor()
-//        case 2: return UIColor.orangeColor()
-//        case 3: return UIColor.redColor()
-//        case 4: return UIColor.purpleColor()
-//        default: return UIColor.grayColor()
-//        }
         let r = CGFloat(arc4random() % 256) / CGFloat(255)
         let g = CGFloat(arc4random() % 256) / CGFloat(255)
         let b = CGFloat(arc4random() % 256) / CGFloat(255)

@@ -15,7 +15,8 @@
 		308645D21B12705B009BDCC1 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308645CE1B12705B009BDCC1 /* Ball.swift */; };
 		308645D31B12705B009BDCC1 /* BreakoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308645CF1B12705B009BDCC1 /* BreakoutViewController.swift */; };
 		308645D41B12705B009BDCC1 /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308645D01B12705B009BDCC1 /* Brick.swift */; };
-		308645D51B12705B009BDCC1 /* Stopper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308645D11B12705B009BDCC1 /* Stopper.swift */; };
+		30C8DD611B13B65400AC9556 /* Paddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C8DD601B13B65400AC9556 /* Paddle.swift */; };
+		30C8DD631B13BD7900AC9556 /* BallDynamicBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C8DD621B13BD7900AC9556 /* BallDynamicBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,8 @@
 		308645CE1B12705B009BDCC1 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		308645CF1B12705B009BDCC1 /* BreakoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutViewController.swift; sourceTree = "<group>"; };
 		308645D01B12705B009BDCC1 /* Brick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
-		308645D11B12705B009BDCC1 /* Stopper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopper.swift; sourceTree = "<group>"; };
+		30C8DD601B13B65400AC9556 /* Paddle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paddle.swift; sourceTree = "<group>"; };
+		30C8DD621B13BD7900AC9556 /* BallDynamicBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallDynamicBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +88,9 @@
 				308645B21B127018009BDCC1 /* Main.storyboard */,
 				308645CE1B12705B009BDCC1 /* Ball.swift */,
 				308645CF1B12705B009BDCC1 /* BreakoutViewController.swift */,
+				30C8DD621B13BD7900AC9556 /* BallDynamicBehavior.swift */,
 				308645D01B12705B009BDCC1 /* Brick.swift */,
-				308645D11B12705B009BDCC1 /* Stopper.swift */,
+				30C8DD601B13B65400AC9556 /* Paddle.swift */,
 				308645AE1B127018009BDCC1 /* AppDelegate.swift */,
 				308645AC1B127018009BDCC1 /* Supporting Files */,
 			);
@@ -223,8 +226,9 @@
 			files = (
 				308645D31B12705B009BDCC1 /* BreakoutViewController.swift in Sources */,
 				308645D41B12705B009BDCC1 /* Brick.swift in Sources */,
+				30C8DD631B13BD7900AC9556 /* BallDynamicBehavior.swift in Sources */,
+				30C8DD611B13B65400AC9556 /* Paddle.swift in Sources */,
 				308645D21B12705B009BDCC1 /* Ball.swift in Sources */,
-				308645D51B12705B009BDCC1 /* Stopper.swift in Sources */,
 				308645AF1B127018009BDCC1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +427,7 @@
 				308645CA1B127018009BDCC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		308645CB1B127018009BDCC1 /* Build configuration list for PBXNativeTarget "BreakoutTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +436,7 @@
 				308645CD1B127018009BDCC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

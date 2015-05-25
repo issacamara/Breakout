@@ -16,28 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-NF-3Iy" customClass="Stopper" customModule="Breakout" customModuleProvider="target">
-                                <rect key="frame" x="275" y="491" width="50" height="25"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-NF-3Iy" customClass="Paddle" customModule="Breakout" customModuleProvider="target">
+                                <rect key="frame" x="275" y="475" width="50" height="25"/>
                                 <color key="backgroundColor" red="0.81336601850000001" green="0.76140521849999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DM6-FL-ep2" appends="YES" id="gox-N1-6c4"/>
+                                    <outletCollection property="gestureRecognizers" destination="sa5-VY-LCS" appends="YES" id="Jv1-zu-rxa"/>
                                 </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4RN-1j-JcS" customClass="Ball" customModule="Breakout" customModuleProvider="target">
+                                <rect key="frame" x="280" y="300" width="25" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ksn-3P-Ow0" appends="YES" id="Xgr-hq-X5d"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="ball" destination="4RN-1j-JcS" id="yCs-Yk-jAl"/>
                         <outlet property="gameView" destination="8bC-Xf-vdC" id="tqM-nD-PN4"/>
-                        <outlet property="stopper" destination="dyD-NF-3Iy" id="dEs-oa-K7a"/>
+                        <outlet property="paddle" destination="dyD-NF-3Iy" id="qQb-jT-5Ns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="DM6-FL-ep2">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="sa5-VY-LCS">
                     <connections>
-                        <action selector="moveStopper:" destination="BYZ-38-t0r" id="6nk-ph-iVt"/>
+                        <action selector="movePaddle:" destination="BYZ-38-t0r" id="aFc-Ta-EWp"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="Ksn-3P-Ow0">
+                    <connections>
+                        <action selector="launchBall:" destination="BYZ-38-t0r" id="GCM-OK-VYp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
